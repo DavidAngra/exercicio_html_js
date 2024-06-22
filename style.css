@@ -22,24 +22,60 @@ main {
 }
 
 .container input {
-   padding: 8px;
+   padding: 12px;
    margin-bottom: 1rem;
+   font-size: 14px;
+   font-weight: 700;
+   background-color: rgb(221, 221, 221);
+   border: none;
+   outline: none;
+}
+
+.container input::placeholder {
+   opacity: 0.5;
+}
+
+.container input::-webkit-inner-spin-button,
+.container input::-webkit-outer-spin-button {
+   display: none;
+}
+
+.container input.error {
+   border: 1px solid red;
+   outline: 1px solid red;
 }
 
 .container button {
-   padding: 8px;
+   padding: 12px;
+   margin-bottom: 1rem;
    font-size: 16px;
    background-color: rgb(7, 168, 7);
    border: none;
    color: #fff;
    font-weight: 700;
    text-transform: uppercase;
+   cursor: pointer;
 }
 
 .error-message {
+   display: none;
+}
+
+.error-message.active {
    padding: 8px;
    background-color: red;
    color: #fff;
    margin-bottom: 1rem;
+   display: block;
+}
+
+.confirmation {
+   padding: 8px;
+   background-color: rgb(7, 168, 7);
    display: none;
+}
+
+.confirmation.active {
+   display: block;
+   color: #fff;
 }
